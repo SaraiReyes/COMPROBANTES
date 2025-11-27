@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="assets/img/factura.ico">
+
+<title>Generador de Comprobantes PDF desde CSV</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<h2>📄Generador de Comprobantes PDF desde CSV</h2>
+
+<input type="file" id="inputCSV" accept=".csv">
+<div id="mensaje"></div>
+
+<div id="filtros" style="display:none;">
+  <button id="btnGenerarTodos" >Generar Todos los Comprobantes</button>
+    <label>Filtrar por Sucursal:</label>
+    <select id="fSucursal"><option value="">-- Todos --</option></select>
+
+    <label>Filtrar por Número de Comprobante:</label>
+    <select id="fNumero"><option value="">-- Todos --</option></select>
+
+    <label>Filtrar por Tipo de Comprobante:</label>
+    <select id="fTipo"><option value="">-- Todos --</option></select>
+    <br>
+    <button id="btnAplicar">Aplicar Filtro</button>
+    <button id="btnGenerarPDF" style="display:none; margin-top:10px;">Generar PDF</button>
+</div>
+
+<div id="tablaContainer" style="margin-top:20px;"></div>
+
+
+
+
+<div id="progressContainer">
+  <div id="progressBar"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<!-- Asegúrate de incluir JSZip y FileSaver.js en tu HTML -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
